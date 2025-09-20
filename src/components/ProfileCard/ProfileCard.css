@@ -1,0 +1,270 @@
+.profile-card {
+  perspective: 1000px;
+  width: 320px;
+  height: 400px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+.profile-card:hover .card-inner {
+  transform: rotateY(5deg) rotateX(5deg) translateZ(20px);
+}
+
+.card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Removed blur - keeping image sharp */
+  transform: scale(1.05);
+  transition: transform 0.6s ease;
+}
+
+.profile-card:hover .card-background {
+  transform: scale(1.1);
+}
+
+.glass-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Reduced opacity for better image visibility */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  backdrop-filter: blur(5px) saturate(150%);
+  -webkit-backdrop-filter: blur(5px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+}
+
+.glass-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+}
+
+.card-content {
+  position: relative;
+  z-index: 10; /* Increased z-index */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  /* Added background for better text visibility */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 100%
+  );
+}
+
+.name-container {
+  position: relative;
+  overflow: visible; /* Changed from hidden */
+}
+
+.name {
+  font-size: 1.5rem; /* Reduced size for better fit */
+  font-weight: 700;
+  color: white;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 1px 0 rgba(0, 0, 0, 0.9); /* Added stronger shadow */
+  margin: 0;
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  letter-spacing: 0.5px;
+  text-align: center;
+  /* Added outline for better visibility */
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.5);
+}
+
+.profile-card:hover .name {
+  transform: translateY(-5px);
+  text-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(255, 255, 255, 0.5),
+    0 2px 0 rgba(0, 0, 0, 1);
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5; /* Reduced z-index to stay behind text */
+}
+
+.floating-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.dot-1 {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.dot-2 {
+  top: 60%;
+  right: 20%;
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+
+.dot-3 {
+  bottom: 30%;
+  left: 25%;
+  animation-delay: 4s;
+  animation-duration: 7s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-20px) rotate(90deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-30px) rotate(270deg);
+    opacity: 1;
+  }
+}
+
+/* Hover glow effect */
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    rgba(130, 69, 236, 0.2),
+    rgba(168, 85, 247, 0.3),
+    rgba(130, 69, 236, 0.2)
+  );
+  border-radius: 22px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.profile-card:hover::before {
+  opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .profile-card {
+    width: 280px;
+    height: 350px;
+  }
+  
+  .name {
+    font-size: 1.2rem;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+}
+
+/* Shine effect - reduced intensity */
+.glass-overlay {
+  position: relative;
+}
+
+.glass-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.profile-card:hover .glass-overlay::before {
+  left: 100%;
+}
