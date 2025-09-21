@@ -8,30 +8,30 @@ gsap.registerPlugin(ScrollTrigger)
 const Education = () => {
 const containerRef=useRef()
 // const cardRef=useRef()
-useGSAP(() => {
-  const cards = gsap.utils.toArray(".scroll-card")
-  cards.forEach((card) => {
-    gsap.from(card, {
-  height: 1,
-  duration: 0.8,
-    borderWidth: 4, 
-      borderColor: "rgba(255,255,255,1)", // bright white border
-        boxShadow: "0 0 20px 6px rgba(255,255,255,0.3)", // strong white glow
-    paddingTop: 0,
-  paddingBottom: 0,
-  marginTop: 0,
-  marginBottom: 0,
-  ease: "power2.out",
-  scrollTrigger: {
-    trigger: card,
-    start: "top 50%",
-    // end:"bottom 90%",
-    scrub:2,
-    // markers:true
-  }
-});
-  })
-}, { scope: containerRef })
+// useGSAP(() => {
+//   const cards = gsap.utils.toArray(".scroll-card")
+//   cards.forEach((card) => {
+//     gsap.from(card, {
+//   height: 1,
+//   duration: 0.8,
+//     borderWidth: 4, 
+//       borderColor: "rgba(255,255,255,1)", // bright white border
+//         boxShadow: "0 0 20px 6px rgba(255,255,255,0.3)", // strong white glow
+//     paddingTop: 0,
+//   paddingBottom: 0,
+//   marginTop: 0,
+//   marginBottom: 0,
+//   ease: "power2.out",
+//   scrollTrigger: {
+//     trigger: card,
+//     start: "top 50%",
+//     // end:"bottom 90%",
+//     scrub:2,
+//     // markers:true
+//   }
+// });
+//   })
+// }, { scope: containerRef })
   return (
     <section
         id='education'

@@ -30,7 +30,7 @@ useGSAP(() => {
         start: "top 120%",    
         end: "bottom 90%",    
         scrub: 2,
-        // markers: true
+        markers: true
       }
     })
   })

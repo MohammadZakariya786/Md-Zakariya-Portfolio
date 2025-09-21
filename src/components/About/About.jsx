@@ -11,50 +11,50 @@ const About = () => {
   const containerRef=useRef()
 
 
-  useGSAP(()=>{
-    var tl=gsap.timeline()
+//   useGSAP(()=>{
+//     var tl=gsap.timeline()
     
-    tl.from(".text-1",{
-      x:-650,
-      duration:1,
-      ease:'back.out',
-      delay:0.5
-    })
+//     tl.from(".text-1",{
+//       x:-650,
+//       duration:1,
+//       ease:'back.out',
+//       delay:0.5
+//     })
 
-    tl.from(".text-2",{
-      height:1,
-      // opacity:0,
-      duration:0.5,
-      ease:'circ.in',
-    })
+//     tl.from(".text-2",{
+//       height:1,
+//       // opacity:0,
+//       duration:0.5,
+//       ease:'circ.in',
+//     })
 
     
-    tl.from(".imgCard",{
-      x:window.innerWidth,
-      duration:2,
-      ease:'power2.inOut',
-      delay:0.1
-      },'-=0.7')
+//     tl.from(".imgCard",{
+//       x:window.innerWidth,
+//       duration:2,
+//       ease:'power2.inOut',
+//       delay:0.1
+//       },'-=0.7')
 
-    tl.from(".imgCard2",{
-      width:1,
-      duration:0.7,
-      ease:'power2.inOut'
-    })
-    tl.from(".imgCard2",{
-      height:1,
-      duration:0.7,
-      ease:'power2.inOut'
-    })
-    tl.to(".imgCard", {
-  filter: "drop-shadow(0 0 20px rgba(255,255,255,1))",
-  duration: 2,
-  repeat: -1,     // infinite
-  yoyo: true,     // back and forth
-  ease: "sine.inOut"
-})
+//     tl.from(".imgCard2",{
+//       width:1,
+//       duration:0.7,
+//       ease:'power2.inOut'
+//     })
+//     tl.from(".imgCard2",{
+//       height:1,
+//       duration:0.7,
+//       ease:'power2.inOut'
+//     })
+//     tl.to(".imgCard", {
+//   filter: "drop-shadow(0 0 20px rgba(255,255,255,1))",
+//   duration: 2,
+//   repeat: -1,     // infinite
+//   yoyo: true,     // back and forth
+//   ease: "sine.inOut"
+// })
 
-},{scope:containerRef})
+// },{scope:containerRef})
 
 
 
