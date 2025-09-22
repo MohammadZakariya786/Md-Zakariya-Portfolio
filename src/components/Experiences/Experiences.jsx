@@ -1,9 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { certificates } from '../../constant'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 gsap.registerPlugin(ScrollTrigger)
 const Experiences = () => {
 
@@ -15,18 +14,34 @@ useGSAP(()=>{
         gsap.from(card,{
             opacity:0,
             scale:0.3,
-            y:500,
+            y:200,
             duration:1,
             scrollTrigger:{
                 trigger:card,
-                start:"top 150%",
-                end:"top 90%",
+                start:"top 120%",
+                end:"bottom 110%",
+                // invalidateOnRefresh: true, 
                 // markers:true,
-                scrub:2
+                scrub:2,
+                 onEnter: () => {
+            ScrollTrigger.refresh()
+          }
             }
         })
     })
 },{scope:containerRef})
+
+// useEffect(() => {
+//     const ro = new ResizeObserver(() => {
+//       ScrollTrigger.refresh(); // refresh whenever About section size changes
+//     });
+//     if (containerRef.current) {
+//       ro.observe(containerRef.current);
+//     }
+//     return () => {
+//       ro.disconnect();
+//     }
+//   }, []);
 
 
 
@@ -60,7 +75,7 @@ useGSAP(()=>{
                 className='h-full w-full object-contain rounded-full'/>
             </div>
             {/* content section  */}
-            <div className={` w-full md:w-[270px] lg:w-[330px] xl:w-[350px] p-4 sm:p-8 rounded-2xl  
+            <div className={` w-full  md:w-[270px] lg:w-[330px] xl:w-[350px] p-4 sm:p-8 rounded-2xl  
             border-2  border-white/70 bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]
             ${index % 2 === 0 ? "md:ml-0 " : "md:mr-0"} md:mr-10 md:ml-10 lg:mr-39 lg:ml-39 xl:mr-[130px] xl:ml-[130px]  ml-8 transform transition-transform duration-300 hover:scale-105`}>
                 {/* company logo  */}

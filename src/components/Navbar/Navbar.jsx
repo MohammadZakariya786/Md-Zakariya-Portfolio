@@ -1,22 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {FiMenu,FiX} from 'react-icons/fi'
-import {FaGithub,FaLinkedin, FaMusic, FaVolumeMute, FaVolumeOff, FaVolumeUp} from 'react-icons/fa'
+import {FaGithub,FaLinkedin, FaMusic, FaVolumeMute, FaVolumeOff, FaVolumeUp, FaWhatsapp} from 'react-icons/fa'
 import audioFile from '../../assets/song.mp3'
-import { FaPause, FaPlay } from 'react-icons/fa'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-
 const Navbar = () => {
 
   const containerRef=useRef()
-  // useGSAP(()=>{
-  //   gsap.from(containerRef.current,{
-  //     y:-300,
-  //     duration:0.5,
-  //     delay:0.5,
-  //     ease:'power1.in'
-  //   })
-  // })
 
       const [isPlaying, setIsPlaying] = useState(false)
       const [isScrolled, setIsScrolled] = useState(false)
@@ -51,7 +39,7 @@ const Navbar = () => {
 
         const section = document.getElementById(sectionId);
         if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({ behavior: 'instant'});
         }
     }
 
@@ -67,7 +55,7 @@ const Navbar = () => {
     const menuItems = [
         {id: 'about', label: 'About'},
         {id: 'work', label: 'Projects'},
-        {id: 'experiences', label: 'Certificates'},
+        // {id: 'experiences', label: 'Certificates'},
         {id: 'education', label: 'Education'},
         {id: 'contact', label: 'Contact'},
     ];
@@ -125,6 +113,14 @@ const Navbar = () => {
                 >
                 <FaLinkedin size={24}/>
                 </a>
+                <a 
+                href="https://wa.me/918299034183?text=Hello%20Mohammad%20Zakariya!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className='text-gray-300 hover:text-[#8245ec]'
+                >
+                <FaWhatsapp size={24}/>
+                </a>
             </div>  
             {/* mobile menu icons  */}
             <div className='lg:hidden '>
@@ -155,24 +151,32 @@ const Navbar = () => {
                                 </button>
                                 </li>
                             ))}
-                          <div className='flex space-x-4'>
-                                <a
-                                  href="https://github.com/MohammadZakariya786"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className='text-gray-300 hover:text-white'
-                                >
-                                  <FaGithub size={24} />
-                                </a>
-                                <a
-                                  href="https://www.linkedin.com/in/mohammad-zakariya-6856bb296/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className='text-gray-300 hover:text-white'
-                                 >
-                                  <FaLinkedin size={24} />
-                                </a>
-                          </div>
+                        <div className='flex space-x-4'>
+                          <a
+                            href="https://github.com/MohammadZakariya786"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='text-gray-300 hover:text-white'
+                          >
+                            <FaGithub size={24} />
+                          </a>
+                          <a
+                            href="https://www.linkedin.com/in/mohammad-zakariya-6856bb296/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='text-gray-300 hover:text-white'
+                          >
+                            <FaLinkedin size={24} />
+                          </a>
+                          <a
+                            href="https://wa.me/918299034183?text=Hello%20Mohammad%20Zakariya!"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='text-gray-300 hover:text-[#8245ec]'
+                          >
+                            <FaWhatsapp size={24} />
+                          </a>
+                        </div>
                     </ul>
                 </div>
                             

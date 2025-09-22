@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import gsap from "gsap"
 import Navbar from './components/Navbar/Navbar'
 import About from './components/About/About'
 import Skills from './components/Skills/Skills'
@@ -9,6 +11,8 @@ import Footer from './components/Footer/Footer'
 import Experiences from './components/Experiences/Experiences'
 import Particles from './components/Galaxy/Particles'
 import Activities from './components/ExtraCurricularActivities/Activities'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
   return (

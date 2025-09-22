@@ -26,15 +26,6 @@ import powerflex from './assets/work_logo/powerflex.webp'
 import shopfinity from './assets/work_logo/shopfinity.webp';
 import grocify from './assets/work_logo/grocify.webp';
 import evion from './assets/work_logo/evion.webp';
-import githubdetLogo from './assets/work_logo/github_det.png';
-import csprepLogo from './assets/work_logo/cs_prep.png';
-import movierecLogo from './assets/work_logo/movie_rec.png';
-import taskremLogo from './assets/work_logo/task_rem.png';
-import npmLogo from './assets/work_logo/npm.png';
-import webverLogo from './assets/work_logo/web_dig.png';
-import cmLogo from './assets/work_logo/cm.png';
-import imagesearchLogo from './assets/work_logo/image_search.png';
-import removebgLogo from './assets/work_logo/remove_bg.png';
 
 // certificates&extraCurriculuarActivities images 
 import mad from './assets/certificate_activity_img/mad.jpeg'

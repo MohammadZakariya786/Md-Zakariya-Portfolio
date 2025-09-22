@@ -19,10 +19,10 @@ const Skills = () => {
       ease:'power3.in',
       scrollTrigger:{
         trigger:containerRef.current,
-        start:'top 130%',
-        end:'bottom 90%',
+        start:'top 140%',
+        end:'bottom 130%',
         scrub:2,
-        // markers:true
+        markers:true
       },
     },
   ),

@@ -1,60 +1,74 @@
-import React, { useRef } from 'react'
+import React, { useRef,useEffect } from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import Tilt from 'react-parallax-tilt';
 import profile from '../../assets/profile2.png';
 import poster from '../../assets/certificate_activity_img/myposter1.jpeg';
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import _ScrollTrigger, { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(_ScrollTrigger)
 const About = () => {
 
   gsap.registerPlugin()
   const containerRef=useRef()
 
 
-//   useGSAP(()=>{
-//     var tl=gsap.timeline()
+  useGSAP(()=>{
+    var tl=gsap.timeline()
     
-//     tl.from(".text-1",{
-//       x:-650,
-//       duration:1,
-//       ease:'back.out',
-//       delay:0.5
-//     })
+    tl.from(".text-1",{
+      x:-650,
+      duration:1,
+      ease:'back.out',
+      delay:0.5
+    })
 
-//     tl.from(".text-2",{
-//       height:1,
-//       // opacity:0,
-//       duration:0.5,
-//       ease:'circ.in',
-//     })
+    tl.from(".text-2",{
+      height:1,
+      // opacity:0,
+      duration:0.5,
+      ease:'circ.in',
+    })
 
     
-//     tl.from(".imgCard",{
-//       x:window.innerWidth,
-//       duration:2,
-//       ease:'power2.inOut',
-//       delay:0.1
-//       },'-=0.7')
+    tl.from(".imgCard",{
+      x:window.innerWidth,
+      duration:2,
+      ease:'power2.inOut',
+      delay:0.1
+      },'-=0.7')
 
-//     tl.from(".imgCard2",{
-//       width:1,
-//       duration:0.7,
-//       ease:'power2.inOut'
-//     })
-//     tl.from(".imgCard2",{
-//       height:1,
-//       duration:0.7,
-//       ease:'power2.inOut'
-//     })
-//     tl.to(".imgCard", {
-//   filter: "drop-shadow(0 0 20px rgba(255,255,255,1))",
-//   duration: 2,
-//   repeat: -1,     // infinite
-//   yoyo: true,     // back and forth
-//   ease: "sine.inOut"
-// })
+    tl.from(".imgCard2",{
+      width:1,
+      duration:0.7,
+      ease:'power2.inOut'
+    })
+    tl.from(".imgCard2",{
+      height:1,
+      duration:0.7,
+      ease:'power2.inOut'
+    })
+    tl.to(".imgCard", {
+  filter: "drop-shadow(0 0 20px rgba(255,255,255,1))",
+  duration: 2,
+  repeat: -1,     // infinite
+  yoyo: true,     // back and forth
+  ease: "sine.inOut"
+})
 
-// },{scope:containerRef})
+},{scope:containerRef})
+
+ useEffect(() => {
+    const ro = new ResizeObserver(() => {
+      ScrollTrigger.refresh(); // refresh whenever About section size changes
+    });
+    if (containerRef.current) {
+      ro.observe(containerRef.current);
+    }
+    return () => {
+      ro.disconnect();
+    }
+  }, []);
 
 
 
@@ -98,7 +112,7 @@ const About = () => {
                   </h3>
                   {/* about me paragraph  */}
                   <p className='overflow-hidden text-2 text-sm sm:text-md md:text-md text-gray-400 mt-8 leading-relaxed'>
-                    I am a Web Developer focused on building interactive and responsive web applications using React.js. I have experience adding modern animations with GSAP and Framer Motion, creating engaging and dynamic user experiences. While my primary interest is in frontend development, I am actively expanding my expertise in the MERN stack with the goal of building scalable full-stack applications. I am dedicated to delivering impactful frontend solutions and contributing to team success.
+                    I am a Web Developer focused on building interactive and responsive web applications using React.js. I enjoy adding smooth animations with GSAP and Framer Motion to make projects more engaging and visually dynamic. While my primary interest is in frontend development, I am actively expanding my expertise in the MERN stack with the goal of building scalable full-stack applications. I am dedicated to delivering impactful frontend solutions and contributing to team success.
                   </p>
                   {/* resume button*/}
                   <a 
@@ -124,7 +138,7 @@ const About = () => {
             scale={1.05}
             transitionSpeed={1000}
             gyroscope={true}
-            className='imgCard2 w-48 h-48 sm:w-60 sm:h-65 md:w-[20rem] md:h-[20rem] xl:w-[20rem] xl:h-[20rem] border-4 border-white rounded-full'>
+            className='imgCard2 w-48 h-48 sm:w-60 sm:h-65 md:w-[20rem] md:h-[20rem] xl:w-[20rem] xl:h-[20rem] border-5 border-white rounded-full'>
             <img src={poster} alt='Mohammad Zakariya'
             className='h-full w-full rounded-full  object-cover'/>
             </Tilt>

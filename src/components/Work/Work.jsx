@@ -26,7 +26,7 @@ useGSAP(() => {
      ease:'power2.out',
       scrollTrigger: {
         trigger: card,
-        start: "top 110%",    
+        start: "top 130%",    
         end: "bottom 90%",    
         scrub: 2,
         // markers: true
@@ -74,7 +74,7 @@ useGSAP(() => {
           className=' transition-transform duration-300'
           > 
           <div className='p-4'>
-            <img src={project.image} alt={project.title} className='w-full h-48 object-cover rounded-xl'/>
+            <img src={project.image} alt={project.title} className='w-full h-full object-contain rounded-xl'/>
           </div>
           <div className='p-6'>
             <h3 className='text-2xl font-bold text-white mb-2'>{project.title}</h3>
@@ -104,7 +104,8 @@ useGSAP(() => {
       <div className='text-center mb-16'>
         <h2 className='text-4xl font-bold text-white'>PROJECTS</h2>
         <div className='w-32 h-1 bg-purple-500 mt-4 mx-auto'></div>
-        <p className='text-md text-gray-400 mt-4 font-semibold'>A showcase of the projects I have worked on, highlighting my skills and experience in various technologies</p>
+        <p className='text-md text-gray-400 mt-4 font-semibold'>A showcase of the projects I have worked on, highlighting my skills and experience in various technologies.</p>
+        <p className='text-white mt-5 font-medium text-[0.8em] animate-pulse'>(Click to view the details of each project)</p>
       </div>
       {/* proect grid  */}
       <div className='grid gap-12 grid-cols-1 md:grid-cols-2'>
@@ -114,8 +115,8 @@ useGSAP(() => {
       </div>
       {/* model container  */}
       {selectedProject && (
-        <div className='fixed inset-0 z-100  flex items-center justify-center bg-purple-900 p-4'>
-          <div className='bg-gray-900  rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl overflow-hidden relative'>
+        <div className='fixed inset-0 z-100  flex items-center justify-center bg-purple-900 overflow-auto  p-2 md:p-4'>
+          <div className='bg-gray-900    rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl relative'>
             <div className='flex justify-end p-4'>
               <button onClick={handleCloseModal} className='text-white text-3xl font-bold hover:text-purple-500'>
               &times;
@@ -123,7 +124,7 @@ useGSAP(() => {
             </div>
             <div className='flex flex-col'>
               <div className=' flex justify-center bg-gray-900 px-4'>
-                <img src={selectedProject.image} alt={selectedProject.title} className=' object-cover rounded-xl xl:max-h-[40vh] lg:max-h-[35vh] w-full  shadow-2xl'/>
+                <img src={selectedProject.image} alt={selectedProject.title} className=' object-contain rounded-xl xl:max-h-[40vh] lg:max-h-[35vh] w-full  shadow-2xl'/>
               </div>
               <div className='lg:p-8 p-6'>
                 <h3 className='lg:text-3xl font-bold text-white mb-4 text-md '>{selectedProject.title}</h3>
