@@ -173,7 +173,7 @@ export const SkillsInfo = [
       description:
       "An interactive e-commerce web app built with React, Tailwind CSS, and Framer Motion. It features a product catalog powered by the Fake Store API with category filters and search, a wishlist that saves items using local storage, a shopping cart with quantity management, and an order system with a clear summary and confirmation modal. The platform also updates product listings instantly as users search or select categories, with smooth animations, smart notifications and a responsive UI for an easy shopping experience across devices.",
       image: shopfinity,
-      tags: ["React.js","Tailwind CSS", "Framer Motion","API"],
+      tags: ["React.js","Tailwind CSS", "Framer Motion","REST API"],
       github: "https://github.com/MohammadZakariya786/Shopfinity",
       webapp: "https://shopfinity-six.vercel.app/",
     },

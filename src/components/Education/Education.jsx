@@ -14,6 +14,7 @@ useGSAP(() => {
     gsap.from(card, {
   height: 1,
   duration: 0.8,
+  transformOrigin:'center center',
     borderWidth: 4, 
       borderColor: "rgba(255,255,255,1)", // bright white border
         boxShadow: "0 0 20px 6px rgba(255,255,255,0.3)", // strong white glow

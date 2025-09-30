@@ -2,7 +2,7 @@ import React, { useRef,useEffect } from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import Tilt from 'react-parallax-tilt';
 import profile from '../../assets/profile2.png';
-import poster from '../../assets/certificate_activity_img/myposter1.jpeg';
+// import poster from '../../assets/certificate_activity_img/myposter1.jpeg';
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import _ScrollTrigger, { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -111,7 +111,7 @@ const About = () => {
                       />
                   </h3>
                   {/* about me paragraph  */}
-                  <p className='overflow-hidden text-2 text-sm sm:text-md md:text-md text-gray-400 mt-8 leading-relaxed'>
+                  <p className='overflow-hidden text-2 gpu-boost text-sm sm:text-md md:text-md text-gray-400 mt-8 leading-relaxed'>
                     I am a Web Developer focused on building interactive and responsive web applications using React.js. I enjoy adding smooth animations with GSAP and Framer Motion to make projects more engaging and visually dynamic. While my primary interest is in frontend development, I am actively expanding my expertise in the MERN stack with the goal of building scalable full-stack applications. I am dedicated to delivering impactful frontend solutions and contributing to team success.
                   </p>
                   {/* resume button*/}
@@ -139,7 +139,7 @@ const About = () => {
             transitionSpeed={1000}
             gyroscope={true}
             className='imgCard2 w-48 h-48 sm:w-60 sm:h-65 md:w-[20rem] md:h-[20rem] xl:w-[20rem] xl:h-[20rem] border-5 border-white rounded-full'>
-            <img src={poster} alt='Mohammad Zakariya'
+            <img src={profile} alt='Mohammad Zakariya'
             className='h-full w-full rounded-full  object-cover'/>
             </Tilt>
             </div>

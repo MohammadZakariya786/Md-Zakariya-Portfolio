@@ -13,13 +13,14 @@ useGSAP(()=>{
     cards.forEach((card,i)=>{
         gsap.from(card,{
             opacity:0,
-            scale:0.3,
+            scale:0.6,
+            transformOrigin:'center center',
             y:200,
             duration:1,
             scrollTrigger:{
                 trigger:card,
                 start:"top 120%",
-                end:"bottom 110%",
+                end:"bottom 90%",
                 // invalidateOnRefresh: true, 
                 // markers:true,
                 scrub:2,

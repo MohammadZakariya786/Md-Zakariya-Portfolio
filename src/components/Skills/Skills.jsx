@@ -15,6 +15,7 @@ const Skills = () => {
       y:200,
       opacity:0,
       scale:0.2,
+      transformOrigin:'center center',
       duration:0.5,
       ease:'power3.in',
       scrollTrigger:{
@@ -22,7 +23,7 @@ const Skills = () => {
         start:'top 140%',
         end:'bottom 130%',
         scrub:2,
-        markers:true
+        // markers:true
       },
     },
   ),
@@ -50,7 +51,7 @@ const Skills = () => {
     <section
     id="skills"
     ref={containerRef}
-    className='py-24 pb-24 mt-25 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans'>
+    className='py-24 pb-24 gpu-boost mt-25 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans'>
     {/* section title  */}
     <div className='text-center mb-8'>
         <h2 className='heading text-3xl sm:text-4xl font-bold text-white'>
