@@ -116,7 +116,7 @@ const About = () => {
                   </p>
                   {/* resume button*/}
                   <a 
-                  href='#contact'
+                  href='https://drive.google.com/file/d/1f6ZnrvEE7FLHa818N6zkftLJmkGRwDa9/view?usp=sharing'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='text-3  z-90 inline-block mt-5 px-8 py-3 text-white font-bold text-md rounded-full shadow-md transform hover:scale-105 active:scale-105 transition duration-300'
