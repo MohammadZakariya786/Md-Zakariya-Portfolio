@@ -34,5 +34,33 @@ button, a, input, textarea, select {
 }
 
 
+/* global scrollbar style*/ 
+/* WebKit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0b1e;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7c3aed 0%, #9333ea 100%);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #9333ea 0%, #c084fc 100%);
+}
+
+/* Firefox Global Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9333ea #0f0b1e;
+}
 
 

@@ -10,6 +10,17 @@ const Footer = () => {
     }
   }
 
+  // tracking function for social media clicks 
+  const trackSocialClick = (platform) => {
+  if (window.gtag) {
+    window.gtag("event", "social_click", {
+      platform: platform,
+      timestamp: new Date().toISOString(),
+    });
+  }
+};
+
+
   return (
     <footer className='text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]'>
       <div className='container mx-auto text-center'>
@@ -36,16 +47,17 @@ const Footer = () => {
       {/* social media icons  */}
       <div className='flex flex-wrap justify-center space-x-4 mt-6'>
         {[
-          {icon:<FaWhatsapp/>,link:'https://wa.me/918299034183?text=Hello%20Mohammad%20Zakariya!'},
-          {icon:<FaLinkedin/>,link:'https://www.linkedin.com/in/mohammad-zakariya-6856bb296/'},
-          {icon:<FaFacebook/>,link:'https://www.facebook.com/share/1WxLu6UTb6/'},
-          {icon:<FaInstagram/>,link:'https://www.instagram.com/im___adnan?igsh=cmo4MGNnazlzaTY2'},
+          {icon:<FaWhatsapp/>,link:'https://wa.me/918299034183?text=Hello%20Mohammad%20Zakariya!', platform: 'whatsapp'},
+          {icon:<FaLinkedin/>,link:'https://www.linkedin.com/in/mohammadzakariya-dev/', platform: 'linkedin'},
+          {icon:<FaFacebook/>,link:'https://www.facebook.com/share/1WxLu6UTb6/', platform: 'facebook'},
+          {icon:<FaInstagram/>,link:'https://www.instagram.com/im___adnan?igsh=cmo4MGNnazlzaTY2', platform: 'instagram'},
         ].map((item,index)=>(
           <a
           key={index} 
           href={item.link}
           target='_blank'
           rel='noopener noreferrer'
+          onClick={() => trackSocialClick(item.platform)}
           className='text-xl hover:text-purple-500 transition-transform transform hover:scale-110'
           >
             {item.icon}

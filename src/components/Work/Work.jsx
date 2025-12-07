@@ -65,12 +65,43 @@ useGSAP(() => {
   }
 
 
+// event tracking functions 
+  const trackProjectClick = (projectTitle) => {
+    if (window.gtag) {
+      window.gtag("event", "project_open", {
+        event_category: "engagement",
+        event_label: projectTitle,
+      });
+    }
+  };
+
+  const trackGithubClick = (projectTitle) => {
+    if (window.gtag) {
+      window.gtag("event", "project_github_click", {
+        event_category: "engagement",
+        event_label: projectTitle,
+      });
+    }
+  };
+
+  const trackLiveClick = (projectTitle) => {
+    if (window.gtag) {
+      window.gtag("event", "project_live_click", {
+        event_category: "engagement",
+        event_label: projectTitle,
+      });
+    }
+  };
+
   const renderCards=projects.map((project)=>(
           <div 
           key={project.id}
           className='container-card animated-border glow-border gpu-boost border-2 border-white/50 bg-gray-900 backdrop-blur-md hover:-translate-y-2 rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50'>
           <div
-          onClick={()=>handleOpenModal(project)}
+          onClick={()=>{
+            trackProjectClick(project.title);
+            handleOpenModal(project);
+          }}
           className=' transition-transform duration-300'
           > 
           <div className='p-4'>
@@ -115,15 +146,15 @@ useGSAP(() => {
       </div>
       {/* model container  */}
       {selectedProject && (
-        <div className='fixed inset-0 z-100  flex items-center justify-center bg-purple-900 overflow-auto  p-2 md:p-4'>
-          <div className='bg-gray-900    rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl relative'>
-            <div className='flex justify-end p-4'>
+        <div  className='fixed inset-0 z-100  flex items-center justify-center bg-purple-900 overflow-auto  p-2 md:p-4'>
+          <div  className='custom-scrollbar bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl relative max-h-[90vh] overflow-y-auto'>
+            <div className='flex justify-end p-4 sticky top-0 bg-gray-900 z-50'>
               <button onClick={handleCloseModal} className='text-white text-3xl font-bold hover:text-purple-500'>
               &times;
               </button>
             </div>
             <div className='flex flex-col'>
-              <div className=' flex justify-center bg-gray-900 px-4'>
+              <div className='flex justify-center bg-gray-900 px-4'>
                 <img src={selectedProject.image} alt={selectedProject.title} className=' object-contain rounded-xl xl:max-h-[40vh] lg:max-h-[35vh] w-full  shadow-2xl'/>
               </div>
               <div className='lg:p-8 p-6'>
@@ -140,10 +171,12 @@ useGSAP(() => {
                 </div>
                 <div className='flex gap-4'>
                   <a href={selectedProject.github} target='_blank' rel='noopener noreferrer'
+                  onClick={() => trackGithubClick(selectedProject.title)}
                   className='w-1/2 bg-gray-800 hover:bg-purple-800 text-gray-400 lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center'>
                   View Code
                   </a>
                   <a href={selectedProject.webapp} target='_blank' rel='noopener noreferrer'
+                  onClick={() => trackLiveClick(selectedProject.title)}
                   className='w-1/2 bg-purple-600 hover:bg-purple-800 text-gray-200 lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center'>
                   View Live
                   </a>

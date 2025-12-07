@@ -22,12 +22,26 @@ const Navbar = () => {
         }
       }, [])
     
+
+      // tracking function for audio play/pause 
+  const trackAudio = (action) => {
+    if (window.gtag) {
+      window.gtag("event", action, {
+        action: action,
+        timestamp: new Date().toISOString(),
+      });
+    }
+  };
+
+
       const toggleAudio = () => {
         if (!audioRef.current) return
         if (isPlaying) {
           audioRef.current.pause() // pause audio
+          trackAudio("audio_pause");
         } else {
           audioRef.current.play().catch((e) => console.log('Play failed:', e)) // play audio
+          trackAudio("audio_play");
         }
         setIsPlaying(!isPlaying) 
       }
@@ -59,6 +73,20 @@ const Navbar = () => {
         {id: 'education', label: 'Education'},
         {id: 'contact', label: 'Contact'},
     ];
+
+
+    // tracking function for web analytics 
+
+    const trackSocialClick = (platform) => {
+  if (window.gtag) {
+    window.gtag("event", "social_click", {
+      platform: platform,
+      timestamp: new Date().toISOString()
+    });
+  }
+};
+
+
 
 
   return (
@@ -101,14 +129,16 @@ const Navbar = () => {
                 href="https://github.com/MohammadZakariya786"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackSocialClick("github")}
                 className='text-gray-300 hover:text-[#8245ec]'
                 >
                 <FaGithub size={24}/>
                 </a>
                 <a 
-                href="https://www.linkedin.com/in/mohammad-zakariya-6856bb296/"
+                href="https://www.linkedin.com/in/mohammadzakariya-dev/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackSocialClick("linkedin")}
                 className='text-gray-300 hover:text-[#8245ec]'
                 >
                 <FaLinkedin size={24}/>
@@ -117,6 +147,7 @@ const Navbar = () => {
                 href="https://wa.me/918299034183?text=Hello%20Mohammad%20Zakariya!"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackSocialClick("whatsapp")}
                 className='text-gray-300 hover:text-[#8245ec]'
                 >
                 <FaWhatsapp size={24}/>
@@ -156,6 +187,7 @@ const Navbar = () => {
                             href="https://github.com/MohammadZakariya786"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => trackSocialClick("github")}
                             className='text-gray-300 hover:text-white'
                           >
                             <FaGithub size={24} />
@@ -164,6 +196,7 @@ const Navbar = () => {
                             href="https://www.linkedin.com/in/mohammad-zakariya-6856bb296/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => trackSocialClick("linkedin")}
                             className='text-gray-300 hover:text-white'
                           >
                             <FaLinkedin size={24} />
@@ -172,6 +205,7 @@ const Navbar = () => {
                             href="https://wa.me/918299034183?text=Hello%20Mohammad%20Zakariya!"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => trackSocialClick("whatsapp")}
                             className='text-gray-300 hover:text-[#8245ec]'
                           >
                             <FaWhatsapp size={24} />

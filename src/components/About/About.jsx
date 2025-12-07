@@ -70,6 +70,16 @@ const About = () => {
     }
   }, []);
 
+  const trackResumeDownload = () => {
+  if (window.gtag) {
+    window.gtag("event", "resume_download", {
+      event_category: "engagement",
+      event_label: "Download Resume Button"
+    });
+  }
+};
+
+
 
 
   return (
@@ -97,11 +107,13 @@ const About = () => {
                 </span>
                       <TypeAnimation
                           sequence={[
-                              'Web Developer', 
+                              'Full Stack Developer', 
                               2000,                 
                               'React Developer',   
                               2000,                 
                               'MERN Enthusiast',  
+                              2000,                 
+                              'Web Developer',  
                               2000,                 
                           ]}
                           wrapper="span"
@@ -112,13 +124,17 @@ const About = () => {
                   </h3>
                   {/* about me paragraph  */}
                   <p className='overflow-hidden text-2 gpu-boost text-sm sm:text-md md:text-md text-gray-400 mt-8 leading-relaxed'>
-                    I am a Web Developer focused on building interactive and responsive web applications using React.js. I enjoy adding smooth animations with GSAP and Framer Motion to make projects more engaging and visually dynamic. While my primary interest is in frontend development, I am actively expanding my expertise in the MERN stack with the goal of building scalable full-stack applications. I am dedicated to delivering impactful frontend solutions and contributing to team success.
+            Full Stack Developer specializing in React.js and Tailwind CSS, with hands-on experience creating responsive,
+            animated user interfaces and end-to-end MERN stack features. Focused on clean UX, modular component design,
+            and delivering production-ready, visually engaging web applications. Passionate about problem-solving, learning,
+            and leveraging AI tools to accelerate development and build efficient solutions.
                   </p>
                   {/* resume button*/}
                   <a 
-                  href='https://drive.google.com/file/d/1f6ZnrvEE7FLHa818N6zkftLJmkGRwDa9/view?usp=sharing'
+                  href='https://drive.google.com/file/d/1dlgST9za5f7NCo3MQ5BGny2fom6ghjUe/view?usp=sharing'
                   target='_blank'
                   rel='noopener noreferrer'
+                  onClick={trackResumeDownload}
                   className='text-3  z-90 inline-block mt-5 px-8 py-3 text-white font-bold text-md rounded-full shadow-md transform hover:scale-105 active:scale-105 transition duration-300'
                   style={{
                   background: 'linear-gradient(90deg, #8245ec, #a855f7)',
