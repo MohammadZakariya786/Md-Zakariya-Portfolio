@@ -15,7 +15,7 @@ const Navbar = () => {
     
       useEffect(() => {
         if (audioRef.current) {
-          audioRef.current.volume = 0.7 // set initial volume
+          audioRef.current.volume = 0.9 // set initial volume
           audioRef.current.play().catch((e) => {
             console.log('Autoplay blocked by browser:', e)
           })
