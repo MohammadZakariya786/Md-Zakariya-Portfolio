@@ -95,36 +95,31 @@ export const SkillsInfo = [
   },
   { 
     id: 11, 
-    name: 'Python', 
-    logo: pythonLogo 
-  },
-  { 
-    id: 12, 
     name: 'Git', 
     logo: gitLogo 
   },
   { 
-    id: 13, 
+    id: 12, 
     name: 'GitHub', 
     logo: githubLogo 
   },
   { 
-    id: 14, 
+    id: 13, 
     name: 'VS Code', 
     logo: vscodeLogo 
   },
   { 
-    id: 15, 
+    id: 14, 
     name: 'Vercel', 
     logo: vercelLogo 
   },
   { 
-    id: 16, 
+    id: 15, 
     name: 'Netlify', 
     logo: netlifyLogo 
   },
   { 
-    id: 17, 
+    id: 16, 
     name: 'Render', 
     logo: renderLogo 
   },
@@ -151,7 +146,7 @@ export const SkillsInfo = [
     {
       id: 2,
       img: cbse,
-      school: "Private Candidate",
+      school: "Toolika Public School, Ghazipur",
       date: "2019 - 2020",
       grade: "70.80%",
       degree: "CBSE(XII) - PCM",
