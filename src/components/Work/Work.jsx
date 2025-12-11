@@ -155,7 +155,7 @@ useGSAP(() => {
             </div>
             <div className='flex flex-col'>
               <div className='flex justify-center bg-gray-900 px-4'>
-                <img src={selectedProject.image} alt={selectedProject.title} className=' object-contain rounded-xl xl:max-h-[40vh] lg:max-h-[55vh]  shadow-2xl'/>
+                <img src={selectedProject.image} alt={selectedProject.title} className=' object-contain rounded-xl xl:max-h-[50vh] md:max-h-[40vh] lg:max-h-[55vh]  shadow-2xl'/>
               </div>
               <div className='lg:p-8 p-6'>
                 <h3 className='lg:text-3xl font-bold text-white mb-4 text-md '>{selectedProject.title}</h3>
