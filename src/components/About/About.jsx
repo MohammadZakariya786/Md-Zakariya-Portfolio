@@ -124,14 +124,14 @@ const About = () => {
                   </h3>
                   {/* about me paragraph  */}
                   <p className='overflow-hidden text-2 gpu-boost text-sm sm:text-md md:text-md text-gray-400 mt-8 leading-relaxed'>
-            Full Stack Developer specializing in React.js and Tailwind CSS, with hands-on experience creating responsive,
-            animated user interfaces and end-to-end MERN stack features. Focused on clean UX, modular component design,
-            and delivering production-ready, visually engaging web applications. Passionate about problem-solving, learning,
-            and leveraging AI tools to accelerate development and build efficient solutions.
+            Full Stack Developer (MERN) focused on React.js and Tailwind CSS, with hands-on experience building responsive
+            user interfaces and backend features using Node.js, Express, and MongoDB. Prioritizing clean UX, modular
+            component architecture, REST APIs, and delivering production-ready, end-to-end web applications. Passionate
+            about problem-solving, learning, and leveraging AI tools to speed up development and build efficient solutions.
                   </p>
                   {/* resume button*/}
                   <a 
-                  href='https://drive.google.com/file/d/1dlgST9za5f7NCo3MQ5BGny2fom6ghjUe/view?usp=sharing'
+                  href='https://drive.google.com/file/d/1VeUaylkmeGCIf7a2jwUN8Fj41rca-MCG/view?usp=drive_link'
                   target='_blank'
                   rel='noopener noreferrer'
                   onClick={trackResumeDownload}
