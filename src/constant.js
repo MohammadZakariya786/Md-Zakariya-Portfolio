@@ -3,6 +3,7 @@ import htmlLogo from './assets/tech_logo/html.png';
 import cssLogo from './assets/tech_logo/css.png';
 import javascriptLogo from './assets/tech_logo/javascript.png';
 import reactjsLogo from './assets/tech_logo/reactjs.png';
+import reduxLogo from './assets/tech_logo/redux-icon.png';
 import tailwindcssLogo from './assets/tech_logo/tailwindcss.png';
 import gsapLogo from './assets/tech_logo/gsap.png';
 import nodejsLogo from './assets/tech_logo/nodejs.png';
@@ -23,6 +24,7 @@ import cbse from './assets/education_logo/cbse.png'
 import vbspu from './assets/education_logo/vbspu.png'
 // Project Section Logo's
 import carrental from './assets/work_logo/carRental.webp'
+import portfolio from './assets/work_logo/portfolio.webp'
 import powerflex from './assets/work_logo/powerflex.webp'
 import shopfinity from './assets/work_logo/shopfinity.webp';
 import grocify from './assets/work_logo/grocify.webp';
@@ -65,61 +67,71 @@ export const SkillsInfo = [
   },
   { 
     id: 5, 
+    name: 'Context API', 
+    logo: reactjsLogo 
+  },
+  { 
+    id: 6, 
+    name: 'Redux Toolkit', 
+    logo: reduxLogo 
+  },
+  { 
+    id: 7, 
     name: 'Tailwind CSS', 
     logo: tailwindcssLogo 
   },
   { 
-    id: 6, 
+    id: 8, 
     name: 'GSAP', 
     logo: gsapLogo 
   },
   { 
-    id: 7, 
+    id: 9, 
     name: 'Framer Motion', 
     logo: framermotionLogo
   },
   { 
-    id: 8, 
+    id: 10, 
     name: 'Node JS', 
     logo: nodejsLogo 
   },
   { 
-    id: 9, 
+    id: 11, 
     name: 'Express JS', 
     logo: expressjsLogo 
   },
   { 
-    id: 10, 
+    id: 12, 
     name: 'MongoDB', 
     logo: mongodbLogo 
   },
   { 
-    id: 11, 
+    id: 13, 
     name: 'Git', 
     logo: gitLogo 
   },
   { 
-    id: 12, 
+    id: 14, 
     name: 'GitHub', 
     logo: githubLogo 
   },
   { 
-    id: 13, 
+    id: 15, 
     name: 'VS Code', 
     logo: vscodeLogo 
   },
   { 
-    id: 14, 
+    id: 16, 
     name: 'Vercel', 
     logo: vercelLogo 
   },
   { 
-    id: 15, 
+    id: 17, 
     name: 'Netlify', 
     logo: netlifyLogo 
   },
   { 
-    id: 16, 
+    id: 18, 
     name: 'Render', 
     logo: renderLogo 
   },
@@ -184,6 +196,16 @@ export const SkillsInfo = [
     ,
     {
       id: 2,
+      title: "Portfolio Website",
+      description:
+        "Animated developer portfolio built with React.js, Tailwind CSS, and GSAP, featuring smooth transitions, responsive design, immersive UX, real-world analytics, high engagement, and global reach. Integrated Google Analytics (GA4) to track user behavior, key engagement events (project opens, clicks, scrolls), and traffic sources. Shared the portfolio post on LinkedIn, reaching 18.5K members and generating 31K+ impressions within 4 days; followers grew from 60 → 243, with 85 new followers directly from this post. Video performance included 11.5K views, 70h+ watch time, 22s average watch time, 500+ reactions, and 289 profile views. The portfolio attracted 440+ users across 10+ countries (top: India, Pakistan, USA) with 1m+ average engagement time and a 28% bounce rate; majority accessed via Chrome on mobile (61%) and desktop (39%), tracked using Google Analytics.",
+      image: portfolio,
+      tags: ["React.js", "Tailwind CSS", "GSAP", "Google Analytics"],
+      github: "https://github.com/MohammadZakariya786/Md-Zakariya-Portfolio",
+      webapp: "https://md-zakariya-portfolio.vercel.app/",
+    },
+    {
+      id: 3,
       title: "ShopFinity",
       description:
         "An interactive e-commerce web app built with React, Tailwind CSS, and Framer Motion. It features a product catalog powered by the Fake Store API with category filters and search, a wishlist that saves items using local storage, a shopping cart with quantity management, and an order system with a clear summary and confirmation modal. The platform also updates product listings instantly as users search or select categories, with smooth animations, smart notifications and a responsive UI for an easy shopping experience across devices.",
@@ -193,7 +215,7 @@ export const SkillsInfo = [
       webapp: "https://shopfinity-six.vercel.app/",
     },
     {
-      id: 3,
+      id: 4,
       title: "Grocify",
       description:
         "A modern, responsive online grocery website, built with React, Tailwind CSS, and GSAP for smooth animations and seamless user experience. Grocify provides category-based browsing, detailed product listings, smooth GSAP-powered transitions, and a fully responsive UI. The highlight feature is its AI-powered chatbot, built with React and Tailwind CSS, and optimized with predefined Q&A, knowledge base integration, Gemini AI API with key rotation, and domain restrictions for accurate and cost-effective responses.Deployment is handled on Vercel serverless functions, with secure environment variable management for API keys.",
@@ -204,7 +226,7 @@ export const SkillsInfo = [
     },
 
   {
-  id: 4,
+  id: 5,
   title: "EVion",
   description: "EVion is a modern, responsive landing page for EV charging solutions, built with React, Tailwind CSS, and GSAP for smooth animations. It features a responsive hero section, animated components, and a modern UI.",
   image: evion, 
@@ -213,7 +235,7 @@ export const SkillsInfo = [
   webapp: "https://evion-two.vercel.app/"
 },
   {
-    id: 5,
+    id: 6,
     title: "PowerFlex",
     description:
       "MERN Stack Final Year Project | Feb 2025 – May 2025 : Developed a web application to streamline gym trainer hiring using the MERN stack. Implemented secure role-based authentication with JWT and Bcrypt.js. Enabled trainers to create profiles, upload certifications, and apply for jobs. Assisted in designing company dashboards for job posting, candidate review, and notifications. Collaborated with the existing backend structure to integrate role-based functionality for trainers and companies.",

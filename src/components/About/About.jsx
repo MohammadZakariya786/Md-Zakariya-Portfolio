@@ -1,7 +1,7 @@
 import React, { useRef,useEffect } from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import Tilt from 'react-parallax-tilt';
-import profile from '../../assets/profile2.png';
+import profile from '../../assets/mohammad-zakariya-full-stack-frontend-web.png';
 // import poster from '../../assets/certificate_activity_img/myposter1.jpeg';
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -131,8 +131,9 @@ const About = () => {
                   </p>
                   {/* resume button*/}
                   <a 
-                  href='https://drive.google.com/file/d/1VeUaylkmeGCIf7a2jwUN8Fj41rca-MCG/view?usp=drive_link'
+                  href='https://drive.google.com/file/d/1wVGtbmLB729JXvg59bA_6OprrUWUi3Aw/view?usp=drive_link'
                   target='_blank'
+                  title="Mohammad Zakariya Full Stack Developer Resume"
                   rel='noopener noreferrer'
                   onClick={trackResumeDownload}
                   className='text-3  z-90 inline-block mt-5 px-8 py-3 text-white font-bold text-md rounded-full shadow-md transform hover:scale-105 active:scale-105 transition duration-300'
@@ -155,8 +156,8 @@ const About = () => {
             transitionSpeed={1000}
             gyroscope={true}
             className='imgCard2 w-48 h-48 sm:w-60 sm:h-65 md:w-[20rem] md:h-[20rem] xl:w-[20rem] xl:h-[20rem] border-5 border-white rounded-full'>
-            <img src={profile} alt='Mohammad Zakariya'
-            className='h-full w-full rounded-full  object-cover'/>
+            <img src={profile} alt='Mohammad Zakariya | Full Stack Developer | Frontend Developer | Web Developer'
+            className='h-full w-full rounded-full  object-cover' title="Mohammad Zakariya - Full Stack Developer"/>
             </Tilt>
             </div>
             </div>
