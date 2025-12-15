@@ -13,6 +13,7 @@
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.2",
     "@tailwindcss/vite": "^4.1.12",
+    "@vercel/analytics": "^1.6.1",
     "gsap": "^3.13.0",
     "ogl": "^1.0.11",
     "react": "^19.1.1",

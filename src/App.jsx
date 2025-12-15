@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import gsap from "gsap"
+import { Analytics } from "@vercel/analytics/react"
 import Navbar from './components/Navbar/Navbar'
 import About from './components/About/About'
 import Skills from './components/Skills/Skills'
@@ -43,6 +44,7 @@ const App = () => {
         <Contact/>
         <Footer/>
       </div>
+      <Analytics/>
     </div>
   )
 }
