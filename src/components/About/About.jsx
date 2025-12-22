@@ -131,8 +131,9 @@ const About = () => {
                   </p>
                   {/* resume button*/}
                   <a 
-                  href='https://drive.google.com/file/d/1wVGtbmLB729JXvg59bA_6OprrUWUi3Aw/view?usp=drive_link'
-                  target='_blank'
+                  href="/Md Zakariya Resume.pdf"
+                  download
+                  // target='_blank'
                   title="Mohammad Zakariya Full Stack Developer Resume"
                   rel='noopener noreferrer'
                   onClick={trackResumeDownload}
