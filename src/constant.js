@@ -24,6 +24,7 @@ import cbse from './assets/education_logo/cbse.png'
 import vbspu from './assets/education_logo/vbspu.png'
 // Project Section Logo's
 import carrental from './assets/work_logo/carRental.webp'
+import shadab from './assets/work_logo/shadab-portfolio.webp'
 import portfolio from './assets/work_logo/portfolio.webp'
 import powerflex from './assets/work_logo/powerflex.webp'
 import shopfinity from './assets/work_logo/shopfinity.webp';
@@ -184,6 +185,7 @@ export const SkillsInfo = [
       tags: [
         "React.js",
         "Tailwind CSS",
+        "Context API",
         "Framer Motion",
         "Node.js",
         "Express",
@@ -196,7 +198,16 @@ export const SkillsInfo = [
     ,
     {
       id: 2,
-      title: "Portfolio Website",
+      title: "Executive Portfolio",
+      description: "A client portfolio website built for a senior ERP Functional Consultant with 16+ years of experience. Developed using React, Tailwind CSS, and Framer Motion, the project delivers a responsive, well-structured interface that clearly presents professional expertise, experience, and consulting capabilities.",
+      image: shadab,
+      tags: ["React.js", "Tailwind CSS", "Framer Motion"],
+      webapp: "https://shadab-portfolio-lilac.vercel.app/"
+    }
+    ,
+    {
+      id: 3,
+      title: "Personal Portfolio",
       description:
         "Animated developer portfolio built with React.js, Tailwind CSS, and GSAP, featuring smooth transitions, responsive design, immersive UX, real-world analytics, high engagement, and global reach. Integrated Google Analytics (GA4) to track user behavior, key engagement events (project opens, clicks, scrolls), and traffic sources. Shared the portfolio post on LinkedIn, reaching 18.5K members and generating 31K+ impressions within 4 days; followers grew from 60 → 243, with 85 new followers directly from this post. Video performance included 11.5K views, 70h+ watch time, 22s average watch time, 500+ reactions, and 289 profile views. The portfolio attracted 440+ users across 10+ countries (top: India, Pakistan, USA) with 1m+ average engagement time and a 28% bounce rate; majority accessed via Chrome on mobile (61%) and desktop (39%), tracked using Google Analytics.",
       image: portfolio,
@@ -205,7 +216,7 @@ export const SkillsInfo = [
       webapp: "https://md-zakariya-portfolio.vercel.app/",
     },
     {
-      id: 3,
+      id: 4,
       title: "ShopFinity",
       description:
         "An interactive e-commerce web app built with React, Tailwind CSS, and Framer Motion. It features a product catalog powered by the Fake Store API with category filters and search, a wishlist that saves items using local storage, a shopping cart with quantity management, and an order system with a clear summary and confirmation modal. The platform also updates product listings instantly as users search or select categories, with smooth animations, smart notifications and a responsive UI for an easy shopping experience across devices.",
@@ -215,7 +226,7 @@ export const SkillsInfo = [
       webapp: "https://shopfinity-six.vercel.app/",
     },
     {
-      id: 4,
+      id: 5,
       title: "Grocify",
       description:
         "A modern, responsive online grocery website, built with React, Tailwind CSS, and GSAP for smooth animations and seamless user experience. Grocify provides category-based browsing, detailed product listings, smooth GSAP-powered transitions, and a fully responsive UI. The highlight feature is its AI-powered chatbot, built with React and Tailwind CSS, and optimized with predefined Q&A, knowledge base integration, Gemini AI API with key rotation, and domain restrictions for accurate and cost-effective responses.Deployment is handled on Vercel serverless functions, with secure environment variable management for API keys.",
@@ -226,7 +237,7 @@ export const SkillsInfo = [
     },
 
   {
-  id: 5,
+  id: 6,
   title: "EVion",
   description: "EVion is a modern, responsive landing page for EV charging solutions, built with React, Tailwind CSS, and GSAP for smooth animations. It features a responsive hero section, animated components, and a modern UI.",
   image: evion, 
@@ -235,12 +246,12 @@ export const SkillsInfo = [
   webapp: "https://evion-two.vercel.app/"
 },
   {
-    id: 6,
+    id: 7,
     title: "PowerFlex",
     description:
       "MERN Stack Final Year Project | Feb 2025 – May 2025 : Developed a web application to streamline gym trainer hiring using the MERN stack. Implemented secure role-based authentication with JWT and Bcrypt.js. Enabled trainers to create profiles, upload certifications, and apply for jobs. Assisted in designing company dashboards for job posting, candidate review, and notifications. Collaborated with the existing backend structure to integrate role-based functionality for trainers and companies.",
     image: powerflex,
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Framer Motion"],
+    tags: ["React.js", "Redux Toolkit", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/MohammadZakariya786/PowerFlex",
     webapp: "https://powerflex.onrender.com/",
   },
